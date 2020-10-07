@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <h1>Soy una cabecera molona!!!</h1>
+    <input type="button" value="Borra" onclick="borra()">
+    <input type="button" value="Oculta" onclick="oculta()">
+    <input type="button" value="Mostrar" onclick="muestra()">
+    <input type="button" value="Oculta/Mostrar" onclick="ocultaMuestra()">
+    <input type="button" value="Persiana" onclick="ocultaPersiana()">
+
+    <script>
+        function borra(){
+            $('h1').remove();
+
+        }
+        function oculta(){
+            $('h1').hide(500);
+        }
+        function muestra(){
+            $('h1').show(500);
+        }
+        function ocultaMuestra(){
+            $('h1').toggle(500);
+        }
+        function ocultaPersiana(){
+            $('h1').slideToggle(500);
+            //slideDown()
+            //slideUp()
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cabecera del documento</h1>
+    <input type="button" value="ejemplo Before" onclick="antes()"/>
+    <input type="button" value="ejemplo Despues" onclick="despues()"/>
+    <script type=text/javascript src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        var numeroParrafo=0;
+        var numeroParrafo1=0;
+        function antes(){
+            var parrafo='<p>hola que ase '+ numeroParrafo+'</p>';
+            numeroParrafo++;
+            $('h1').before(parrafo);
+            
+        }
+        function despues(){
+            numeroParrafo1++;
+            var parrafo='<p>hola que ase '+ numeroParrafo1+'</p>';
+            $('h1').after(parrafo);
+        }
+    </script>
+</body>
+</html>

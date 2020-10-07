@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1 id="mensaje">hola JQuery!</h1>
+    <input type="button" value="ejemplo jquerry" onclick="borrar()"/>
+    <input type="button" value="oculta" onclick="oculta()"/>
+    <input type="button" value="oculta2" onclick="oculta2()"/>
+
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        function borrar(){
+            //importante el dollar significa jquery
+            //importante # significa id
+        
+        $('#mensaje').html('soy la ave fenix, he renacido de mis cenizas!!!');
+    }
+    function oculta(){
+        $('#mensaje').fadeOut('slow');
+    }
+    function oculta2(){
+        $('#mensaje').fadeToggle('slow');
+    }
+    </script>
+    
+</body>
+</html>

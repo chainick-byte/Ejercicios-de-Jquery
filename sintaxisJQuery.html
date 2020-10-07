@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="todo">
+        <p id="parrafo_1">hola que ase</p>
+        <p id="parrafo_2">No pasa naaa. too correcto</p>
+        <p id="parrafo_3">Aqui andamios</p>
+        <Br>
+        <input type="button" value="borra tags html" onclick="cambia()" />
+        <ul>
+            <li class="seleccionado">valor 1</li>
+            <li>valor 2</li>
+            <li>valor 3</li>
+            <li>valor 1</li>
+            <li>valor 2</li>
+            <li>valor 3</li>
+            <li>valor 1</li>
+            <li>valor 2</li>
+            <li>valor 3</li>
+        </ul>
+        <Br>
+        <input type="button" value="borra una clase eneterade etiquetas" onclick="cambia_2()" />
+        <input type="button" value="impares" onclick="impares()" />
+        <input type="button" value="pares" onclick="pares()" />
+    </div>
+    <Br><Br><Br>
+    <input type="button" value="cambia un id" onclick="cambia_3()" />
+    <input type="button" value="cambia una clase y un id" onclick="cambia_4()"/>
+
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <script>
+        //CONCLUSION:
+        //para referirnos a las etiquetas del dom se utiliza $('etiqueta') sin mas
+        //para referirnos a una clase se utiliza $('.nombreCLase')
+        //para referirnos a una id se utiliza $('#idSeleccionado')
+        //se puede crear combinacion de selectores $('#parrafo_1, .seleccionado')
+        function cambia() {
+            $('p').fadeOut('slow');
+        }
+        function cambia_2() {
+            $('.seleccionado').fadeOut('slow');
+        }
+        function cambia_3() {
+            $('#todo').html('he cambiado todo el DOM');
+        } 
+        function cambia_4(){
+            $('#parrafo_2,.seleccionado').fadeOut('slow');
+            console.log("funciona")
+        }
+        function impares(){
+            $('li:odd').css('background-color','red').html('impares');
+        }
+        function pares(){
+            $('li:even').css('background-color','grey').html("pares");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+    <style>
+        .reslatado{
+            background-color: aqua;
+            font-size: larger;
+
+        }
+        .reslatado_2{
+            background-color:red;
+            font-size: smaller;
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 id="cabecitaLoka">cabecera cabecera, una entre millones</h1>
+    <input type="button" value="Algo hago" onclick="cambiaColor()"/>
+    <input type="button" value="cambio CSS" onclick="agregaCSS()"/>
+    <input type="button" value="cambio CSS" onclick="agregaCSS_2()"/>
+    
+    <script>
+        function cambiaColor() {
+            $('#cabecitaLoka').css(
+                {
+                    'background-color': 'grey',
+                    'font-size': 56
+                }
+            );
+        }
+        //nunca dejaremos dos clases competiendo por una elemento de pagina web
+        //antes de nada hay que quitar una clase y despues se añade otra nueva
+        function agregaCSS(){
+            $('#cabecitaLoka').removeClass('reslatado_2').addClass('reslatado')
+        }
+        function agregaCSS_2(){
+            $('#cabecitaLoka').removeClass('reslatado').addClass('reslatado_2')
+        }
+    </script>
+</body>
+
+</html>
